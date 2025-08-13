@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cameron Ball | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">Cameron Ball</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <h1>Hi, I'm Cameron</h1>
+    <p>UX/UI Designer & Developer crafting thoughtful and functional designs</p>
+    <a href="#projects" class="btn">View My Work</a>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+        I grew up in Charleston, South Carolina, and have always been passionate about technology and helping others use it effectively.
+    As a designer and developer, I focus on creating engaging, user-friendly experiences.
+    With a calm approach and commitment to continuous learning, I deliver quality work that meets both user needs and organizational goals.
+    My research interests lie in human interaction with AI, such as Microsoft Copilot in Bing and how AI integration impacts diverse users in their everyday interactions with technology and services. </p>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Selected Work</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>Photography Wireframe</h3>
+        <img
+          src="Pictures/Wireframe_Picture.jpg"
+          alt="Wireframe for Photography Site"
+          onclick="openModal('Pictures/Photography_Site_WireFrame_combined.pdf')"
+          class="clickable-image"
+        />
+        <button onclick="openModal('Pictures/Photography_Site_WireFrame_combined.pdf')">Preview PDF</button>
+        <p>
+          The wireframe of my final project for my Web Design class, showing
+          the planned layout for my site.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h3>Public Plot</h3>
+        <img
+          src="Pictures/PublicPlot_Picture.jpg"
+          alt="Public Plot Project"
+          onclick="openModal('Pictures/Public_Plot.pdf')"
+          class="clickable-image"
+        />
+        <button onclick="openModal('Pictures/Public_Plot.pdf')">Preview PDF</button>
+        <p>
+          A high fidelity prototype of Public Plot, created in Figma as the
+          final group project for my UI/UX class. Includes user profiles and a
+          short video demonstrating the app's functionality.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h3>UI Sketch</h3>
+        <img
+          src="Pictures/Sketch.jpg"
+          alt="Sketch of Baking App"
+          onclick="openModal('Pictures/UI_Sketch.pdf')"
+          class="clickable-image"
+        />
+        <button onclick="openModal('Pictures/UI_Sketch.pdf')">Preview PDF</button>
+        <p>
+          A quick sketch of a baking app layout for my Mobile Application class,
+          showing all planned pages and functionality to be developed using
+          React Native.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h3>Photo Site</h3>
+        <img
+          src="Pictures/Photosite_Photo.jpg"
+          alt="Photo Site Project"
+          onclick="openModal('Pictures/Photo_Site.pdf')"
+          class="clickable-image"
+        />
+        <button onclick="openModal('Pictures/Photo_Site.pdf')">Preview PDF</button>
+        <p>
+          A multi-page photography site I created for my Web Development class,
+          featuring work from 2022–2023 and plans for my senior year.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h3>Wind Within</h3>
+        <img
+          src="Pictures/Wind-Within.jpg"
+          alt="Wind Within Project"
+          onclick="openModal('Pictures/Wind-Within.jpg')"
+          class="clickable-image"
+        />
+        <button onclick="openModal('Pictures/Wind-Within.jpg')">Preview Image</button>
+        <p>
+          My senior year capstone project — an artistic audio-visual experience
+          powered by wind data, smartphones, and audience movement, created in
+          collaboration with the University of Utah's art department.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h3>CFH App</h3>
+        <img
+          src="Pictures/CFH_App.png"
+          alt="CFH App Project"
+          onclick="openModal('Pictures/CFH_App.png')"
+          class="clickable-image"
+        />
+        <button onclick="openModal('Pictures/CFH_App.png')">Preview Image</button>
+        <p>
+          A prototype app for the International African American Museum's Center
+          of Family History. Users answer genealogy-related questions and are
+          directed to relevant video content via QR codes.
+        </p>
+      </div>
+
+      <div class="project-card">
+  <h3>Roller Ball</h3>
+  <img
+    src="Pictures/Roller_Ball_Menu.jpg"
+    alt="Roller Ball Game"
+    onclick="openModal('Pictures/Roller_Ball_Menu.jpg')"
+    class="clickable-image"
+  />
+  <button onclick="openModal('Pictures/Roller_Ball_Menu.jpg')">Preview Image</button>
+  <p>
+    A Unity-based game in which players guide a rolling ball through
+    increasingly complex mazes to collect points and progress to higher levels.
+  </p>
+</div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Get in Touch</h2>
+    <p>Email: <a href="mailto:ball.cameron014@gmail.com">ball.cameron014@gmail.com</a></p>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/cameron-ball-086214221/" target="_blank"
+        >LinkedIn</a
+      >
+      <a href="https://github.com/BallCam" target="_blank">GitHub</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Cameron Ball. All rights reserved.</p>
+  </footer>
+
+  <!-- Modal -->
+  <div id="pdfModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <iframe id="pdfViewer" src="" style="display:none;"></iframe>
+    <img
+      id="imgViewer"
+      src=""
+      alt="Preview Image"
+      style="display:none; border-radius:8px; max-width:90%; max-height:80vh; margin: auto; display: block;"
+    />
+  </div>
+
+  <script>
+    function openModal(fileUrl) {
+      const modal = document.getElementById('pdfModal');
+      const pdfViewer = document.getElementById('pdfViewer');
+      const imgViewer = document.getElementById('imgViewer');
+
+      // Get file extension
+      const ext = fileUrl.split('.').pop().toLowerCase();
+
+      if (ext === 'pdf') {
+        imgViewer.style.display = 'none';
+        pdfViewer.style.display = 'block';
+        pdfViewer.src = fileUrl + '#zoom=75';
+      } else if (['jpg', 'jpeg', 'png', 'gif', 'webp'].includes(ext)) {
+        pdfViewer.style.display = 'none';
+        imgViewer.style.display = 'block';
+        imgViewer.src = fileUrl;
+      } else {
+        alert('Unsupported file format for preview.');
+        return;
+      }
+
+      modal.style.display = 'block';
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('pdfModal');
+      const pdfViewer = document.getElementById('pdfViewer');
+      const imgViewer = document.getElementById('imgViewer');
+
+      modal.style.display = 'none';
+      pdfViewer.src = '';
+      imgViewer.src = '';
+    }
+  </script>
+</body>
+</html>

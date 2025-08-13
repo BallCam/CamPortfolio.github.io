@@ -1,0 +1,355 @@
+/* ---------- Global Styles ---------- */
+:root {
+    --primary: #4a5d4e;   /* Dark muted green */
+    --secondary: #8fa68e; /* Soft sage */
+    --accent: #e7d9c4;    /* Tan accent */
+    --light-bg: #f7f6f2;  /* Warm light background */
+    --text: #2c2c2c;      /* Dark gray for text */
+    --white: #ffffff;
+    --shadow: rgba(0, 0, 0, 0.08);
+    --gradient: linear-gradient(135deg, #e7d9c4 0%, #8fa68e 100%);
+    --divider: #d1c7b7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--gradient);
+    color: var(--text);
+    line-height: 1.7;
+    letter-spacing: 0.02em;
+    min-height: 100vh;
+    transition: background 0.5s;
+}
+
+/* ---------- Header ---------- */
+header {
+    background: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 2.5rem;
+    box-shadow: 0 2px 12px var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid var(--divider);
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--primary);
+    letter-spacing: 0.05em;
+    text-shadow: 0 2px 8px var(--shadow);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 500;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background: var(--accent);
+    color: var(--text);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+    text-align: center;
+    padding: 5rem 2rem 4rem 2rem;
+    background: var(--secondary);
+    color: var(--white);
+    border-radius: 0 0 32px 32px;
+    box-shadow: 0 8px 32px var(--shadow);
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1.2s;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-shadow: 0 4px 16px var(--shadow);
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2.2rem;
+    color: var(--accent);
+}
+
+.btn {
+    background: var(--primary);
+    color: var(--white);
+    padding: 0.9rem 1.7rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.08rem;
+    box-shadow: 0 2px 8px var(--shadow);
+    transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+    border: none;
+    outline: none;
+}
+
+.btn:hover {
+    background: var(--secondary);
+    color: var(--primary);
+    box-shadow: 0 4px 16px var(--shadow);
+    transform: translateY(-2px) scale(1.04);
+}
+
+/* ---------- Sections ---------- */
+section {
+    padding: 3.5rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    background: var(--white);
+    border-radius: 18px;
+    box-shadow: 0 2px 16px var(--shadow);
+    margin-bottom: 2.5rem;
+    border-top: 4px solid var(--divider);
+    border-bottom: 4px solid var(--divider);
+}
+
+h2 {
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 2.2rem;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    position: relative;
+    z-index: 1;
+}
+
+/* ---------- Projects Grid ---------- */
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.2rem;
+}
+
+.project-card {
+    background: var(--accent);
+    border-radius: 16px;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    box-shadow: 0 6px 24px var(--shadow);
+    text-align: center;
+    flex: 0 1 300px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s, box-shadow 0.25s;
+    border: 1.5px solid var(--divider);
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 1s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.16);
+    border-color: var(--primary);
+}
+
+.project-card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.35rem;
+    color: var(--primary);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.project-card img {
+    max-width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 12px var(--shadow);
+}
+
+.project-card p {
+    font-size: 1rem;
+    flex-grow: 1;
+    color: var(--text);
+    margin-bottom: 0.8rem;
+}
+
+/* ---------- Buttons ---------- */
+button {
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    margin: 1rem auto 0;
+    display: block;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow: 0 2px 8px var(--shadow);
+    transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: var(--secondary);
+    color: var(--primary);
+    box-shadow: 0 4px 16px var(--shadow);
+    transform: translateY(-2px) scale(1.04);
+}
+
+/* ---------- Contact Section ---------- */
+.social-links {
+    margin: 2.5rem auto 2rem auto;
+    display: flex;
+    justify-content: center;
+    gap: 2.2rem;
+    background: var(--accent);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px var(--shadow);
+    border: 2px solid var(--divider);
+    padding: 1.5rem 2rem;
+    max-width: 500px;
+    animation: fadeInUp 1.2s;
+}
+
+.social-links a {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-size: 1.15rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 2px 8px var(--shadow);
+    background: var(--white);
+    border: 1.5px solid var(--divider);
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.2s;
+}
+
+.social-links a:hover {
+    background: var(--secondary);
+    color: var(--white);
+    box-shadow: 0 4px 16px var(--shadow);
+    transform: translateY(-2px) scale(1.04);
+    border-color: var(--primary);
+}
+
+/* ---------- Footer ---------- */
+footer {
+    background: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 1.2rem;
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+    border-top: 2px solid var(--divider);
+    box-shadow: 0 -2px 12px var(--shadow);
+}
+
+/* ---------- Modal ---------- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(0,0,0,0.85);
+}
+
+.modal iframe {
+    display: block;
+    margin: auto;
+    width: 80%;
+    height: 80vh;
+    border: none;
+    border-radius: 8px;
+    background: var(--white);
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: var(--white);
+    font-size: 2.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-shadow: 0 2px 8px var(--shadow);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+    nav ul {
+        gap: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    section {
+        padding: 2rem 1rem;
+        border-radius: 12px;
+    }
+    .project-card {
+        flex: 0 1 90vw;
+        padding: 1.2rem 0.5rem;
+    }
+}
+.modal iframe, 
+.modal img {
+  width: 90vw;
+  height: 80vh;
+  border: none;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.clickable-image {
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.25s ease;
+}
+
+.clickable-image:hover {
+  transform: scale(1.03);
+}
+
+/* ---------- Animations ---------- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: none; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: none; }
+}
