@@ -3,221 +3,339 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="keywords"
-  content="Cameron Ball, UX/UI designer, web developer, portfolio, user experience, web design"/>
-  <title>Cameron Ball | Portfolio</title>
+  <meta name="description" content="Cameron Ball is a UX/UI designer and technologist creating thoughtful, human-centered digital experiences." />
+  <meta name="theme-color" content="#f7f6f2" />
+  <title>Cameron Ball | UX/UI Designer & Technologist</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <div class="logo">Cameron Ball</div>
-    <nav>
+  <header class="site-header">
+    <a class="logo" href="#home" aria-label="Cameron Ball, home">Cameron Ball<span>.</span></a>
+    <nav aria-label="Main navigation">
       <ul>
-        <li><a href="#home">Home</a></li>
+        <li><a href="#work">Work</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+    <a class="header-resume" href="Cameron_Ball_Resume_Updated_v3.pdf" download>Resume <span aria-hidden="true">↗</span></a>
   </header>
 
-  <!-- Hero -->
-  <section id="home" class="hero">
-    <h1>Hi, I'm Cameron</h1>
-    <p>UX/UI Designer & Developer crafting thoughtful and functional designs</p>
-    <a href="#projects" class="btn">View My Work</a>
-  </section>
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> UX/UI designer · technologist · researcher</p>
+        <h1>Thoughtful technology,<br /><em>designed around people.</em></h1>
+        <p class="hero-intro">I bring design, development, and hands-on technology support together to make digital experiences more useful, inclusive, and human.</p>
+        <div class="hero-actions">
+          <a href="#work" class="button button-primary">Explore my work <span aria-hidden="true">↓</span></a>
+          <a href="Cameron_Ball_Resume_Updated_v3.pdf" class="text-link" target="_blank" rel="noopener noreferrer">View résumé <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <aside class="hero-note" aria-label="Current focus">
+        <span class="note-mark" aria-hidden="true">✳</span>
+        <p class="note-label">Curious about</p>
+        <p class="note-title">How people and technology work better together.</p>
+        <p class="note-detail">Human-computer interaction · accessible design · everyday AI</p>
+        <span class="note-location">Charleston, South Carolina</span>
+      </aside>
+      <a class="scroll-cue" href="#work"><span aria-hidden="true">↓</span> A few things I’ve made</a>
+    </section>
 
-  <!-- About -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-        I grew up in Charleston, South Carolina, and have always been passionate about technology and helping others use it effectively.
-    As a designer,developer, and researcher I focus on creating engaging, user-friendly experiences.
-    With a calm approach and commitment to continuous learning, I deliver quality work that meets both user needs and organizational goals.
-    My research interests lie in human interaction with AI, such as Microsoft Copilot in Bing and how AI integration impacts diverse users in their everyday interactions with technology and services. </p>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects">
-    <h2>Selected Work</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <h3>Photography Wireframe</h3>
-        <img
-          src="Pictures/Wireframe_Picture.jpg"
-          alt="Wireframe for Photography Site"
-          onclick="openModal('Pictures/Photography_Site_WireFrame_combined.pdf')"
-          class="clickable-image"
-        />
-        <button onclick="openModal('Pictures/Photography_Site_WireFrame_combined.pdf')">Preview PDF</button>
-        <p>
-          The wireframe of my final project for my Web Design class, showing
-          the planned layout for my site.
-        </p>
+    <section id="work" class="content-section work-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Selected work</p>
+          <h2>Ideas made tangible.</h2>
+        </div>
+        <p class="section-intro">From early sketches to interactive experiences, each project starts with understanding the people it’s for.</p>
       </div>
 
-      <div class="project-card">
-        <h3>Public Plot</h3>
-        <img
-          src="Pictures/Public_Plot.png"
-          alt="Public Plot Project"
-          onclick="openModal('Pictures/Public_Plot.pdf')"
-          class="clickable-image"
-        />
-        <button onclick="openModal('Pictures/Public_Plot.pdf')">Preview PDF</button>
-        <button onclick="openModal('Pictures/Public_Plot.png')">Preview Image</button>
-        <p>
-          A high fidelity prototype of Public Plot, created in Figma as the
-          final group project for my UI/UX class. Includes user profiles and a
-          short video demonstrating the app's functionality.
-        </p>
+      <div class="projects-grid">
+        <article class="project-card project-card-featured">
+          <div class="project-image">
+            <img src="Pictures/Wind-Within.jpg" alt="Visual from The Wind Within, an interactive wind-inspired experience" loading="lazy" />
+            <span class="project-number">01</span>
+          </div>
+          <div class="project-info">
+            <p class="project-type">Capstone · Interactive experience</p>
+            <h3>The Wind Within</h3>
+            <p>An artistic audio-visual experience powered by wind data, smartphones, and audience movement, created with the University of Utah’s art department.</p>
+            <button class="preview-button" type="button" data-preview="Pictures/Wind-Within.jpg" data-kind="image" data-title="The Wind Within">View project image <span aria-hidden="true">↗</span></button>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-image">
+            <img src="Pictures/Public_Plot.png" alt="Public Plot app prototype" loading="lazy" />
+            <span class="project-number">02</span>
+          </div>
+          <div class="project-info">
+            <p class="project-type">UI/UX · Group project</p>
+            <h3>Public Plot</h3>
+            <p>A high-fidelity Figma prototype created for a UI/UX course, applying user-centered design principles to a mobile product.</p>
+            <div class="project-actions">
+              <button class="preview-button" type="button" data-preview="Pictures/Public_Plot.pdf" data-kind="pdf" data-title="Public Plot prototype">Preview prototype <span aria-hidden="true">↗</span></button>
+              <a class="project-link" href="Pictures/Public_Plot.png" target="_blank" rel="noopener noreferrer">Open image <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-image">
+            <img src="Pictures/CFH_App.png" alt="Center for Family History app prototype" loading="lazy" />
+            <span class="project-number">03</span>
+          </div>
+          <div class="project-info">
+            <p class="project-type">Mobile app · Prototype</p>
+            <h3>Center for Family History</h3>
+            <p>A prototype for the International African American Museum that guides visitors through genealogy questions to relevant video content.</p>
+            <button class="preview-button" type="button" data-preview="Pictures/CFH_App.png" data-kind="image" data-title="Center for Family History app">View project image <span aria-hidden="true">↗</span></button>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-image">
+            <img src="Pictures/Photosite_Photo.jpg" alt="Photography website project" loading="lazy" />
+            <span class="project-number">04</span>
+          </div>
+          <div class="project-info">
+            <p class="project-type">Web development · Photography</p>
+            <h3>Photo Site</h3>
+            <p>A multi-page photography website pairing a considered layout with a collection of work from 2022–2023.</p>
+            <button class="preview-button" type="button" data-preview="Pictures/Photo_Site.pdf" data-kind="pdf" data-title="Photo Site">Preview website <span aria-hidden="true">↗</span></button>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-image">
+            <img src="Pictures/Wireframe_Picture.jpg" alt="Photography website wireframe" loading="lazy" />
+            <span class="project-number">05</span>
+          </div>
+          <div class="project-info">
+            <p class="project-type">UX process · Wireframing</p>
+            <h3>Photography Wireframe</h3>
+            <p>An early layout study for a photography website, mapping the structure and content before visual design and development.</p>
+            <button class="preview-button" type="button" data-preview="Pictures/Photography_Site_WireFrame_combined.pdf" data-kind="pdf" data-title="Photography website wireframe">Preview wireframe <span aria-hidden="true">↗</span></button>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-image">
+            <img src="Pictures/Sketch.jpg" alt="Hand-drawn sketch of a baking app interface" loading="lazy" />
+            <span class="project-number">06</span>
+          </div>
+          <div class="project-info">
+            <p class="project-type">Mobile app · Early concepts</p>
+            <h3>Baking App Sketch</h3>
+            <p>A hand-drawn interface concept mapping the planned pages and functionality for a React Native mobile application.</p>
+            <button class="preview-button" type="button" data-preview="Pictures/UI_Sketch.pdf" data-kind="pdf" data-title="Baking app interface sketch">Preview sketches <span aria-hidden="true">↗</span></button>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-image">
+            <img src="Pictures/Roller_Ball_Menu.jpg" alt="Menu screen for a Unity rolling-ball game" loading="lazy" />
+            <span class="project-number">07</span>
+          </div>
+          <div class="project-info">
+            <p class="project-type">Unity · Game development</p>
+            <h3>Roller Ball</h3>
+            <p>A Unity game where players navigate increasingly complex mazes, collect points, and progress through levels.</p>
+            <button class="preview-button" type="button" data-preview="Pictures/Roller_Ball_Menu.jpg" data-kind="image" data-title="Roller Ball game">View game image <span aria-hidden="true">↗</span></button>
+          </div>
+        </article>
       </div>
 
-      <div class="project-card">
-        <h3>UI Sketch</h3>
-        <img
-          src="Pictures/Sketch.jpg"
-          alt="Sketch of Baking App"
-          onclick="openModal('Pictures/UI_Sketch.pdf')"
-          class="clickable-image"
-        />
-        <button onclick="openModal('Pictures/UI_Sketch.pdf')">Preview PDF</button>
-        <p>
-          A quick sketch of a baking app layout for my Mobile Application class,
-          showing all planned pages and functionality to be developed using
-          React Native.
-        </p>
+      <div class="research-block">
+        <div class="research-heading">
+          <p class="eyebrow">Research in progress</p>
+          <h3>Designing for how people really work.</h3>
+          <p>My graduate work explores practical ways technology can support people in complex, everyday environments.</p>
+        </div>
+        <article class="research-card">
+          <span class="research-index">01 / FIELD TOOLS</span>
+          <h4>Data Center Safety Reporting</h4>
+          <p>Researching a mobile hazard-reporting tool for field employees, alongside a dashboard that helps off-site teams track risks and recurring trends.</p>
+        </article>
+        <article class="research-card">
+          <span class="research-index">02 / INCLUSIVE WORK</span>
+          <h4>Remote Work &amp; Neurodivergence</h4>
+          <p>Exploring how remote neurodivergent workers—including people with ADHD, autism, and dyslexia—can build trust and connection with their teams.</p>
+        </article>
       </div>
+    </section>
 
-      <div class="project-card">
-        <h3>Photo Site</h3>
-        <img
-          src="Pictures/Photosite_Photo.jpg"
-          alt="Photo Site Project"
-          onclick="openModal('Pictures/Photo_Site.pdf')"
-          class="clickable-image"
-        />
-        <button onclick="openModal('Pictures/Photo_Site.pdf')">Preview PDF</button>
-        <p>
-          A multi-page photography site I created for my Web Development class,
-          featuring work from 2022–2023 and plans for my senior year.
-        </p>
+    <section id="about" class="content-section about-section">
+      <div class="about-copy">
+        <p class="eyebrow">A little about me</p>
+        <h2>Good design begins with listening.</h2>
+        <p>I grew up in Charleston, South Carolina, with a lasting curiosity about technology and how it can help people. I’m a designer, developer, and researcher who brings a calm, people-first approach to solving practical problems.</p>
+        <p>I’m especially interested in human-computer interaction: how tools like AI assistants fit into everyday life, how those experiences affect different people, and how to make technology feel more understandable and accessible.</p>
+        <a href="Cameron_Ball_Resume_Updated_v3.pdf" class="text-link" target="_blank" rel="noopener noreferrer">More about my background <span aria-hidden="true">↗</span></a>
       </div>
-
-      <div class="project-card">
-        <h3>Wind Within</h3>
-        <img
-          src="Pictures/Wind-Within.jpg"
-          alt="Wind Within Project"
-          onclick="openModal('Pictures/Wind-Within.jpg')"
-          class="clickable-image"
-        />
-        <button onclick="openModal('Pictures/Wind-Within.jpg')">Preview Image</button>
-        <p>
-          My senior year capstone project — an artistic audio-visual experience
-          powered by wind data, smartphones, and audience movement, created in
-          collaboration with the University of Utah's art department.
-        </p>
+      <div class="education-card">
+        <p class="eyebrow">Learning, always</p>
+        <div class="education-entry">
+          <span class="education-date">Expected 2028</span>
+          <h3>M.S. Human-Computer Interaction</h3>
+          <p>Interactive Computing</p>
+          <span class="education-school">Georgia Institute of Technology · Atlanta, GA</span>
+        </div>
+        <div class="education-entry">
+          <span class="education-date">May 2024</span>
+          <h3>B.A. Computing in the Arts</h3>
+          <p>Digital Media Concentration · Cum Laude</p>
+          <span class="education-school">College of Charleston · Charleston, SC</span>
+        </div>
+        <div class="honors-line"><span aria-hidden="true">✳</span> President’s List (twice) · Honors Graduate</div>
       </div>
+    </section>
 
-      <div class="project-card">
-        <h3>CFH App</h3>
-        <img
-          src="Pictures/CFH_App.png"
-          alt="CFH App Project"
-          onclick="openModal('Pictures/CFH_App.png')"
-          class="clickable-image"
-        />
-        <button onclick="openModal('Pictures/CFH_App.png')">Preview Image</button>
-        <p>
-          A prototype app for the International African American Museum's Center
-          of Family History. Users answer genealogy-related questions and are
-          directed to relevant video content via QR codes.
-        </p>
+    <section id="experience" class="content-section experience-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Experience &amp; capabilities</p>
+          <h2>Technology, from every angle.</h2>
+        </div>
+        <p class="section-intro">I’ve supported real people and real systems while building the skills to design what comes next.</p>
       </div>
+      <div class="experience-layout">
+        <div class="experience-list">
+          <article class="experience-item">
+            <div class="experience-date">May – Aug 2026 <span>Long Beach, CA</span></div>
+            <div>
+              <h3>IT Support Intern <span>@ JetZero</span></h3>
+              <ul>
+                <li>Built a simulation PC and calibrated the Hangar Flight Simulator.</li>
+                <li>Created an onboarding tool to estimate user-licensing and hardware costs.</li>
+                <li>Provided hardware and software support in a fast-paced startup.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="experience-item">
+            <div class="experience-date">2025 – 2026 <span>Charleston, SC</span></div>
+            <div>
+              <h3>PC Technician &amp; IT Support <span>@ City of Charleston</span></h3>
+              <ul>
+                <li>Re-imaged, configured, and deployed PCs across city departments.</li>
+                <li>Diagnosed and repaired technology used by municipal teams.</li>
+                <li>Provided AV and technical support for City Council meetings.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="experience-item">
+            <div class="experience-date">2024 – 2025 <span>Charleston, SC</span></div>
+            <div>
+              <h3>Technology Associate <span>@ International African American Museum</span></h3>
+              <ul>
+                <li>Managed exhibit technology and AV systems for events and collaborations.</li>
+                <li>Supported installations, research, and archival projects.</li>
+                <li>Maintained a device database and wrote SOPs and user guides.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+        <aside class="skills-panel">
+          <p class="eyebrow">Tools &amp; skills</p>
+          <div class="skill-group">
+            <h3>UX &amp; research</h3>
+            <p>UI/UX design · UX research · Human factors · User-centered design · Interactive prototyping</p>
+          </div>
+          <div class="skill-group">
+            <h3>Development</h3>
+            <p>HTML5 · CSS · JavaScript · React Native · C# · C · Python · Java · PHP · MySQL</p>
+          </div>
+          <div class="skill-group">
+            <h3>Technology</h3>
+            <p>Unity · Arduino · Linux · 3D modeling &amp; animation · Microsoft Lists · Excel · AV support</p>
+          </div>
+          <div class="skill-group">
+            <h3>Ways of working</h3>
+            <p>Agile · Scrum · Technical documentation · SOP writing · PC building &amp; troubleshooting</p>
+          </div>
+          <p class="affiliations"><strong>Affiliations &amp; honors</strong><br />National Society of Black Engineers · College of Charleston Cyber Security Club · U of SC Multicultural Assistance Program · International Baccalaureate Certificate</p>
+        </aside>
+      </div>
+    </section>
 
-      <div class="project-card">
-  <h3>Roller Ball</h3>
-  <img
-    src="Pictures/Roller_Ball_Menu.jpg"
-    alt="Roller Ball Game"
-    onclick="openModal('Pictures/Roller_Ball_Menu.jpg')"
-    class="clickable-image"
-  />
-  <button onclick="openModal('Pictures/Roller_Ball_Menu.jpg')">Preview Image</button>
-  <p>
-    A Unity-based game in which players guide a rolling ball through
-    increasingly complex mazes to collect points and progress to higher levels.
-  </p>
-</div>
-    </div>
-  </section>
+    <section id="contact" class="contact-section">
+      <p class="eyebrow">Have a thoughtful challenge?</p>
+      <h2>Let’s make something<br /><em>that makes a difference.</em></h2>
+      <p>I’m always glad to connect about human-centered design, technology, and opportunities to help people.</p>
+      <a href="mailto:ball.cameron014@gmail.com" class="button button-light">Say hello <span aria-hidden="true">↗</span></a>
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/in/cameron-ball-086214221/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+        <a href="https://github.com/BallCam" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+        <a href="Cameron_Ball_Resume_Updated_v3.pdf" target="_blank" rel="noopener noreferrer">Résumé <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
 
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Get in Touch</h2>
-    <p>Email: <a href="mailto:ball.cameron014@gmail.com">ball.cameron014@gmail.com</a></p>
-    <div class="social-links">
-      <a href="https://www.linkedin.com/in/cameron-ball-086214221/" target="_blank"
-        >LinkedIn</a
-      >
-      <a href="https://github.com/BallCam" target="_blank">GitHub</a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2026 Cameron Ball. All rights reserved.</p>
+  <footer class="site-footer">
+    <a class="logo" href="#home">Cameron Ball<span>.</span></a>
+    <p>Designed with curiosity and care. <span>© 2026 Cameron Ball</span></p>
+    <a class="back-to-top" href="#home">Back to top ↑</a>
   </footer>
 
-  <!-- Modal -->
-  <div id="pdfModal" class="modal">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <iframe id="pdfViewer" src="" style="display:none;"></iframe>
-    <img
-      id="imgViewer"
-      src=""
-      alt="Preview Image"
-      style="display:none; border-radius:8px; max-width:90%; max-height:80vh; margin: auto; display: block;"
-    />
-  </div>
+  <dialog class="preview-dialog" aria-labelledby="preview-title">
+    <div class="dialog-toolbar">
+      <h2 id="preview-title">Project preview</h2>
+      <button class="dialog-close" type="button" aria-label="Close preview">&times;</button>
+    </div>
+    <iframe class="dialog-pdf" title="Project PDF preview" hidden></iframe>
+    <img class="dialog-image" alt="" hidden />
+  </dialog>
 
   <script>
-    function openModal(fileUrl) {
-      const modal = document.getElementById('pdfModal');
-      const pdfViewer = document.getElementById('pdfViewer');
-      const imgViewer = document.getElementById('imgViewer');
+    const previewDialog = document.querySelector('.preview-dialog');
+    const previewTitle = document.querySelector('#preview-title');
+    const pdfViewer = document.querySelector('.dialog-pdf');
+    const imageViewer = document.querySelector('.dialog-image');
 
-      // Get file extension
-      const ext = fileUrl.split('.').pop().toLowerCase();
+    document.querySelectorAll('.preview-button').forEach((button) => {
+      button.addEventListener('click', () => {
+        const file = button.dataset.preview;
+        const kind = button.dataset.kind;
+        previewTitle.textContent = button.dataset.title;
 
-      if (ext === 'pdf') {
-        imgViewer.style.display = 'none';
-        pdfViewer.style.display = 'block';
-        pdfViewer.src = fileUrl + '#zoom=75';
-      } else if (['jpg', 'jpeg', 'png', 'gif', 'webp'].includes(ext)) {
-        pdfViewer.style.display = 'none';
-        imgViewer.style.display = 'block';
-        imgViewer.src = fileUrl;
-      } else {
-        alert('Unsupported file format for preview.');
-        return;
-      }
+        if (kind === 'pdf') {
+          imageViewer.hidden = true;
+          imageViewer.removeAttribute('src');
+          pdfViewer.hidden = false;
+          pdfViewer.src = `${file}#zoom=75`;
+        } else {
+          pdfViewer.hidden = true;
+          pdfViewer.removeAttribute('src');
+          imageViewer.alt = button.dataset.title;
+          imageViewer.src = file;
+          imageViewer.hidden = false;
+        }
 
-      modal.style.display = 'block';
+        previewDialog.showModal();
+      });
+    });
+
+    function closePreview() {
+      previewDialog.close();
+      pdfViewer.removeAttribute('src');
+      imageViewer.removeAttribute('src');
     }
 
-    function closeModal() {
-      const modal = document.getElementById('pdfModal');
-      const pdfViewer = document.getElementById('pdfViewer');
-      const imgViewer = document.getElementById('imgViewer');
-
-      modal.style.display = 'none';
-      pdfViewer.src = '';
-      imgViewer.src = '';
-    }
+    document.querySelector('.dialog-close').addEventListener('click', closePreview);
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && previewDialog.open) closePreview();
+    });
+    previewDialog.addEventListener('click', (event) => {
+      if (event.target === previewDialog) closePreview();
+    });
+    previewDialog.addEventListener('close', () => {
+      pdfViewer.removeAttribute('src');
+      imageViewer.removeAttribute('src');
+      pdfViewer.hidden = true;
+      imageViewer.hidden = true;
+    });
   </script>
 </body>
 </html>
